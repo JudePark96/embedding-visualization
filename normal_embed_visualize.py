@@ -10,5 +10,5 @@ normal_embed_weights = normal_embed_weights.numpy()
 t_sne = TSNE(n_components=2, verbose=2)
 tsne_normal_embed = t_sne.fit_transform(normal_embed_weights)
 
-plt.scatter(tsne_normal_embed[:0], tsne_normal_embed[:1])
+plt.scatter(tsne_normal_embed[:, 0], tsne_normal_embed[:, 1])
 plt.savefig('normal_embed_figure.png')
